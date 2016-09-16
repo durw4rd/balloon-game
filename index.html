@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <title>Balloon game</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Modak" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+
+  <body>
+    <header>
+      <h1 class="header-main">Balloon-popping game!</h1>
+
+      <div class="counter-wrapper">
+        <p>Your score: <span class="counter">0</span></p>
+      </div>
+    </header>
+
+    <main>
+      <div class="sun"></div>
+
+      <div class="instructions">
+        <p>Welcome to the balloon popping practice!</p>
+        <p>After you hit the start button, your goal is to pop as many balloons as possible before they leave the screen.</p>
+        <p>To pop a balloon you need to clink on it with your cursor.</p>
+      </div>
+
+      <div class="start-button">
+        <h3>Start the game!</h3>
+      </div>
+
+      <div class="results">
+        <p>Nice popping! See below how you did.</p>
+        <ul>
+          <li>&emsp;<strong>0 - 5 points:</strong> you're quite a looser</li>
+          <li>&emsp;<strong>5 - 10 points:</strong> nothing special but not complete laught stock</li>
+          <li>&emsp;<strong>10 - 12 points:</strong> OK, I guess</li>
+          <li>&emsp;<strong>13 - 14 points:</strong> you're a BOSS!</li>
+          <li>&emsp;<strong>15 points:</strong> you have probably cheated, shame on you!</li>
+        </ul>
+      </div>
+      <div class="repeat-button">
+        <h3>Try again!</h3>
+      </div>
+
+      <div class="container">
+        <div class="balloon">
+          <div class="inflatable"></div>
+          <div class="string"></div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>Built with <i class="fa fa-heart-o" aria-hidden="true"></i> as part of a Taste of Code course in Sept. 2016.</p>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
