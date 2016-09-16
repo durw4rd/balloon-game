@@ -1,10 +1,12 @@
 /* General page settings */
 
+/* this is include border within element's size */
 * {
   box-sizing: border-box;
 }
 
 body {
+  /* further read on flexbox: https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
   display: flex;
   flex-direction: column;
 
@@ -19,6 +21,7 @@ header {
   flex: 0 0 100px;
 
   background-color: #42A5F5;
+  /* RGB + alpha (AKA opacity) value */
   border-bottom: 3px solid rgba(255,255,255,0.35);
 
   z-index: 2;
@@ -50,7 +53,6 @@ main {
 
   width: 80vw;
   margin: 0 auto;
-  /*border: 1px solid red;*/
 
   display: flex;
   flex-direction: row;
@@ -93,27 +95,9 @@ main {
   border: 4px solid white;
 }
 
-p {
-  font-family: 'Lato', sans-serif;
-  font-variant: small-caps;
-  text-align: center;
-  letter-spacing: 1px;
-
-  color: white;
-}
-
-li {
-  font-family: 'Lato', sans-serif;
-  font-variant: small-caps;
-  text-align: left;
-  letter-spacing: 1px;
-
-  color: white;
-}
 
 
-
-/* (extra) Styling for instructions & start button */
+/* Styling for instructions, results & start + repeat buttons */
 
 .instructions, .results {
   width: 600px;
@@ -154,20 +138,37 @@ li {
   cursor: pointer;
 }
 
-h3 {
+.start-button h3, .repeat-button h3 {
   margin: 0;
+}
+
+p {
+  font-family: 'Lato', sans-serif;
+  font-variant: small-caps;
+  text-align: center;
+  letter-spacing: 1px;
+
+  color: white;
+}
+
+li {
+  font-family: 'Lato', sans-serif;
+  font-variant: small-caps;
+  text-align: left;
+  letter-spacing: 1px;
+
+  color: white;
 }
 
 
 
-/* Styling balloons */
+/* Styling balloon(s) */
 
 .balloon {
   margin: 25px;
   display: inline-block;
   position: absolute;
   bottom: 0;
-  transform: scale(1);
 }
 
 .inflatable {

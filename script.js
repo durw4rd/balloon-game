@@ -17,9 +17,11 @@ $('.balloon').hide();
 $('.repeat-button').hide();
 $('.results').hide();
 
-// whole game sequence wrapped in a function so it can be used repeatedly -> no need to reload the site to play again
+
 function start(){
+  // whole game sequence wrapped in a function so it can be used repeatedly -> no need to reload the site to play again
   var gameStart = function() {
+    // (re)setting initial counter state
     counter = 0;
     $(".counter").html(counter);
 
@@ -28,6 +30,8 @@ function start(){
     $('.start-button').hide();
     $('.instructions').hide();
     $('.balloon').show();
+
+    // delaying show/hide effect with jQuery
     $('.results').delay(7000).show(0);
     $('.repeat-button').delay(7000).show(0);
 
@@ -56,12 +60,12 @@ function start(){
         left: Math.random() * containerWidth + leftMargin
       },8000);
 
-      // on-click event that: a) makes the pop sound (+sets the mp3 file back to the begining if it didn't finish playing) b) removes balloon from page
+      // on-click event that: a) triggers the pop sound (+sets the mp3 file back to the beginning if it didn't finish playing yet)
       balloonCopy.click(function(){
         popSound.pause();
         popSound.currentTime = 0;
         popSound.play();
-        
+        // b) removes balloon from page
         $(this).remove();
 
         // update the counter
@@ -78,11 +82,13 @@ function start(){
   $('.repeat-button').click(gameStart);
 };
 
-function preloadPopSound(){
+// loading the audio file
+function loadPopSound(){
   var audio = new Audio('sounds/balloon-pop.mp3');
   audio.preload = "auto";
   $(audio).on("loadeddata",start);
   return audio;
 };
 
-var popSound = preloadPopSound();
+// assigning the returned value to a variable
+var popSound = loadPopSound();
